@@ -1,0 +1,1 @@
+{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Row } from \"antd\";\n\nconst Cat = () => {\n  return __jsx(React.Fragment, null, __jsx(Row, null, __jsx(\"h1\", null, \"hello cat!\")));\n};\n\nexport default Cat;","map":null,"metadata":{},"sourceType":"module"}

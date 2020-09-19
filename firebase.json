@@ -1,0 +1,174 @@
+{
+	"hosting": {
+		"public": "./out",
+		"headers": [
+			{
+				"source": "**/*.@(js|html)",
+				"headers": [
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					}
+				]
+			}
+		],
+		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+		"rewrites": [
+			{
+				"source": "/test",
+				"destination": "/test.html"
+			},
+			{
+				"source": "/loading",
+				"destination": "/loading.html"
+			},
+			{
+				"source": "/result/alpaca",
+				"destination": "/result/alpaca.html"
+			},
+			{
+				"source": "/result/chihuahua",
+				"destination": "/result/chihuahua.html"
+			},
+			{
+				"source": "/result/cow",
+				"destination": "/result/cow.html"
+			},
+			{
+				"source": "/result/crab",
+				"destination": "/result/crab.html"
+			},
+			{
+				"source": "/result/deoksun",
+				"destination": "/result/deoksun.html"
+			},
+			{
+				"source": "/result/dinosaur",
+				"destination": "/result/dinosaur.html"
+			},
+			{
+				"source": "/result/fish",
+				"destination": "/result/fish.html"
+			},
+			{
+				"source": "/result/giraffe",
+				"destination": "/result/giraffe.html"
+			},
+			{
+				"source": "/result/gorilla",
+				"destination": "/result/gorilla.html"
+			},
+			{
+				"source": "/result/hamster",
+				"destination": "/result/hamster.html"
+			},
+			{
+				"source": "/result/hedgehog",
+				"destination": "/result/hedgehog.html"
+			},
+			{
+				"source": "/result/husky",
+				"destination": "/result/husky.html"
+			},
+			{
+				"source": "/result/koala",
+				"destination": "/result/koala.html"
+			},
+			{
+				"source": "/result/llama",
+				"destination": "/result/llama.html"
+			},
+			{
+				"source": "/result/malteeze",
+				"destination": "/result/malteeze.html"
+			},
+			{
+				"source": "/result/meerkat",
+				"destination": "/result/meerkat.html"
+			},
+			{
+				"source": "/result/panda",
+				"destination": "/result/panda.html"
+			},
+			{
+				"source": "/result/parrot",
+				"destination": "/result/parrot.html"
+			},
+			{
+				"source": "/result/persian",
+				"destination": "/result/persian.html"
+			},
+			{
+				"source": "/result/polar",
+				"destination": "/result/polar.html"
+			},
+			{
+				"source": "/result/pomenarian",
+				"destination": "/result/pomenarian.html"
+			},
+			{
+				"source": "/result/poodle",
+				"destination": "/result/poodle.html"
+			},
+			{
+				"source": "/result/quokka",
+				"destination": "/result/quokka.html"
+			},
+			{
+				"source": "/result/rabbit",
+				"destination": "/result/rabbit.html"
+			},
+			{
+				"source": "/result/retriever",
+				"destination": "/result/retriever.html"
+			},
+			{
+				"source": "/result/shorthair",
+				"destination": "/result/shorthair.html"
+			},
+			{
+				"source": "/result/sloth",
+				"destination": "/result/sloth.html"
+			},
+			{
+				"source": "/result/squirrel",
+				"destination": "/result/squirrel.html"
+			},
+			{
+				"source": "/result/turtle",
+				"destination": "/result/turtle.html"
+			},
+			{
+				"source": "/result/unicorn",
+				"destination": "/result/unicorn.html"
+			},
+			{
+				"source": "/result/welsh",
+				"destination": "/result/welsh.html"
+			},
+			{
+				"source": "/result/woodpecker",
+				"destination": "/result/woodpecker.html"
+			},
+			{
+				"source": "/result/**",
+				"destination": "/index.html"
+			},
+			{
+				"source": "**",
+				"destination": "/index.html"
+			}
+		]
+	},
+	"storage": {
+		"rules": "storage.rules"
+	},
+	"firestore": {
+		"rules": "firestore.rules",
+		"indexes": "firestore.indexes.json"
+	},
+	"functions": {
+		"source": "functions",
+		"predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"]
+	}
+}
