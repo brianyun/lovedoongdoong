@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import "antd/dist/antd.css";
+import { NextSeo } from "next-seo";
+import SEO from "../next-seo.config.js";
 
 import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
@@ -13,6 +15,7 @@ import { createGlobalStyle } from "styled-components";
 const App = ({ Component }) => {
 	return (
 		<>
+			<NextSeo {...SEO} />
 			<Head>
 				<meta charSet="utf-8" />
 				<title>나와 찰떡궁합인 반려동물은?</title>

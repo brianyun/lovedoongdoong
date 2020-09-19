@@ -2,12 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import { FacebookProvider, Share } from "react-facebook";
-import {
-	RowsContainer,
-	Texty,
-	ActionBtn,
-	IconBtn,
-} from "../assets/css/style_result";
+import { RowsContainer, ActionBtn, IconBtn } from "../assets/css/style_result";
 import { CLEAR_URLS } from "../reducers/answer";
 import icons from "../back/icon_result";
 
@@ -24,16 +19,16 @@ function ShareGroup({ title, thumbUrl }) {
 					description: title,
 					imageUrl: thumbUrl,
 					link: {
-						mobileWebUrl: "https://mbti-bf18c.web.app/",
-						webUrl: "https://mbti-bf18c.web.app/",
+						mobileWebUrl: "https://lovedoongdoong.com",
+						webUrl: "https://lovedoongdoong.com",
 					},
 				},
 				buttons: [
 					{
 						title: "나도 해볼래요",
 						link: {
-							mobileWebUrl: "https://mbti-bf18c.web.app/",
-							webUrl: "https://mbti-bf18c.web.app/",
+							mobileWebUrl: "https://lovedoongdoong.com",
+							webUrl: "https://lovedoongdoong.com",
 						},
 					},
 				],
@@ -56,46 +51,6 @@ function ShareGroup({ title, thumbUrl }) {
 		router.push("/");
 	};
 
-	const toRandom = () => {
-		dispatch({ type: CLEAR_URLS });
-		const types = [
-			"alpaca",
-			"chihuahua",
-			"cow",
-			"crab",
-			"deoksun",
-			"dinosaur",
-			"fish",
-			"giraffe",
-			"gorilla",
-			"hamster",
-			"hedgehog",
-			"husky",
-			"koala",
-			"llama",
-			"malteeze",
-			"meerkat",
-			"panda",
-			"parrot",
-			"persian",
-			"polar",
-			"pomenarian",
-			"poodle",
-			"quokka",
-			"rabbit",
-			"retriever",
-			"shorthair",
-			"sloth",
-			"squirrel",
-			"turtle",
-			"unicorn",
-			"welsh",
-			"woodpecker",
-		];
-		const randomType = types[1 + Math.floor(Math.random() * 32)];
-		router.push("/result/".concat(randomType));
-	};
-
 	return (
 		<>
 			<RowsContainer>
@@ -108,7 +63,7 @@ function ShareGroup({ title, thumbUrl }) {
 				</IconBtn>
 
 				<FacebookProvider appId="3621305641226627">
-					<Share href="http://www.facebook.com">
+					<Share href="http://lovedoongdoong.com">
 						{({ handleClick }) => (
 							<IconBtn onClick={handleClick}>
 								<img

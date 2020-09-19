@@ -28,7 +28,7 @@ const Loading = () => {
 	const [v, setV] = useState(null);
 
 	useEffect(() => {
-		if (ans) {
+		if (ans.length !== 0) {
 			console.log("ans is ", ans);
 			setV(result[calculator(ans)]);
 
@@ -80,6 +80,7 @@ const Loading = () => {
 				},
 			});
 			setReady(true);
+			router.push("/result/".concat(v["id"]));
 		}
 	}, [thumbUrl]);
 

@@ -105,5 +105,6 @@ export const IconBtn = styled.button`
 	cursor: pointer;
 	display: flex;
 	justify-content: flex-end;
-	background: url("/assets/images/result/share_kakao.png") no-repeat top left;
+	background-color: #fff;
+	outline: none;
 `;
