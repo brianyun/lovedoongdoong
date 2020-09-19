@@ -1,1 +1,0 @@
-{"ast":null,"code":"var calculator = function calculator(arr) {\n  var result = 0;\n  var index;\n\n  for (index = 0; index < arr.length; ++index) {\n    result += arr[index] * Math.pow(10, index);\n  }\n\n  result = result + 99 * Math.pow(10, arr.length);\n  return result;\n};\n\nexport default calculator;","map":null,"metadata":{},"sourceType":"module"}

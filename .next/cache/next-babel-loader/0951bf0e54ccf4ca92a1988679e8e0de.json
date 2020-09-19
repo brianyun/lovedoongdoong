@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport { Row, Button } from \"antd\";\n\nconst Home = () => {\n  return __jsx(React.Fragment, null, __jsx(Row, {\n    justify: \"center\"\n  }, __jsx(Button, null, \"\\uD654\\uB974\\uB974\")));\n};\n\nexport default Home;","map":null,"metadata":{},"sourceType":"module"}

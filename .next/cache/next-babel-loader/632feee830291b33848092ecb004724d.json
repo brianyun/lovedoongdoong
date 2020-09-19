@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport Result from \"../../components/Result\";\n\nvar husky = function husky() {\n  return __jsx(React.Fragment, null, __jsx(Result, {\n    name: \"husky\"\n  }));\n};\n\nexport default husky;","map":null,"metadata":{},"sourceType":"module"}

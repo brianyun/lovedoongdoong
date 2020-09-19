@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport Result from \"../../components/Result\";\n\nvar koala = function koala() {\n  return __jsx(React.Fragment, null, __jsx(Result, {\n    name: \"koala\"\n  }));\n};\n\nexport default koala;","map":null,"metadata":{},"sourceType":"module"}

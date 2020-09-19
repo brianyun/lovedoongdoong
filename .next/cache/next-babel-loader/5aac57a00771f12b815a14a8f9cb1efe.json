@@ -1,1 +1,0 @@
-{"ast":null,"code":"var __jsx = React.createElement;\nimport React from \"react\";\nimport Result from \"../../components/Result\";\n\nvar giraffe = function giraffe() {\n  return __jsx(React.Fragment, null, __jsx(Result, {\n    name: \"giraffe\"\n  }));\n};\n\nexport default giraffe;","map":null,"metadata":{},"sourceType":"module"}
