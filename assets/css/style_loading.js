@@ -8,25 +8,25 @@ export const WidthImg = styled.img`
 	height: auto;
 `;
 
-export const Texty = styled.p`
-	font-family: "NanumSquareRound", "Godo", Arial;
+// export const Texty = styled.p`
+// 	font-family: "NanumSquareRound", "Godo", Arial;
 
-	text-align: center;
-	display: block;
-	margin-top: ${(props) => (props.top ? props.top : 0)}px;
-	margin-bottom: ${(props) => (props.bottom ? props.bottom : 0)}px;
-	font-size: ${(props) => (props.font ? props.font : 0)}px;
-	color: ${(props) => (props.color ? props.color : "#000000")};
-`;
+// 	text-align: center;
+// 	display: block;
+// 	margin-top: ${(props) => (props.top ? props.top : 0)}px;
+// 	margin-bottom: ${(props) => (props.bottom ? props.bottom : 0)}px;
+// 	font-size: ${(props) => (props.font ? props.font : 0)}px;
+// 	color: ${(props) => (props.color ? props.color : "#000000")};
+// `;
 
-export const CaptionContainer = styled.div`
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
+// export const CaptionContainer = styled.div`
+// 	position: absolute;
+// 	top: 0;
+// 	width: 100%;
+// 	height: 100%;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
-`;
+// 	display: flex;
+// 	align-items: center;
+// 	justify-content: center;
+// 	z-index: 100;
+// `;

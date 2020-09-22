@@ -13,7 +13,7 @@ import { v4 as uuid } from "uuid";
 import calculator from "../back/calculator";
 import result from "../assets/result.json";
 
-import { WidthImg, Texty, CaptionContainer } from "../assets/css/style_loading";
+import { WidthImg } from "../assets/css/style_loading";
 import { Container, containerCol } from "../assets/css/style_global";
 
 const Loading = () => {
@@ -107,11 +107,6 @@ const Loading = () => {
 			<Container>
 				<Col {...containerCol}>
 					<WidthImg src={require("../assets/images/loading.gif")} />
-					<CaptionContainer>
-						<Texty top={20} font={20}>
-							분석중..
-						</Texty>
-					</CaptionContainer>
 				</Col>
 			</Container>
 		</>
