@@ -24,8 +24,11 @@ const Test = () => {
 		setAnswerArr((prevArr) => [...prevArr, ans]);
 
 		if (index === 10) {
-			ans === 1 ? setIndex(11) : setIndex(12);
+			ans === 1
+				? setIndex(11)
+				: (setAnswerArr((prevArr) => [...prevArr, 9]), setIndex(12));
 		} else if (index === 11) {
+			setAnswerArr((prevArr) => [...prevArr, 9]);
 			setIndex(13);
 		} else {
 			if (index === maxCount) {
@@ -38,7 +41,7 @@ const Test = () => {
 
 	useEffect(() => {
 		if (answerArr.length === maxCount) {
-			//console.log("AnswerArr is: " + answerArr);
+			console.log("AnswerArr is: " + answerArr);
 			dispatch({ type: CLEAR_URLS });
 			dispatch({
 				type: ADD_ANSWER,

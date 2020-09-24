@@ -14,7 +14,7 @@ const Question = ({ index, handler }) => {
 	const click = (ans) => {
 		if (document) {
 			const list = document.getElementsByClassName("btn");
-			list[ans - 1].blur();
+			list[ans].blur();
 		}
 		handler(ans);
 	};
@@ -47,15 +47,15 @@ const Question = ({ index, handler }) => {
 
 			{q[index - 1].a3 ? (
 				<>
-					<OptionBtn className="btn" onClick={() => click(1)}>
+					<OptionBtn className="btn" onClick={() => click(0)}>
 						{q[index - 1].a1}
 					</OptionBtn>
 
-					<OptionBtn className="btn" onClick={() => click(2)}>
+					<OptionBtn className="btn" onClick={() => click(1)}>
 						{q[index - 1].a2}
 					</OptionBtn>
 
-					<OptionBtn className="btn" onClick={() => click(3)}>
+					<OptionBtn className="btn" onClick={() => click(2)}>
 						{q[index - 1].a3}
 					</OptionBtn>
 				</>
@@ -65,7 +65,7 @@ const Question = ({ index, handler }) => {
 						<OptionBtn
 							className="btn"
 							isHalf={true}
-							onClick={() => click(1)}
+							onClick={() => click(0)}
 						>
 							{q[index - 1].a1}
 						</OptionBtn>
@@ -73,7 +73,7 @@ const Question = ({ index, handler }) => {
 						<OptionBtn
 							className="btn"
 							isHalf={true}
-							onClick={() => click(2)}
+							onClick={() => click(1)}
 						>
 							{q[index - 1].a2}
 						</OptionBtn>
@@ -83,7 +83,7 @@ const Question = ({ index, handler }) => {
 
 			{q[index - 1].a4 ? (
 				<>
-					<OptionBtn className="btn" onClick={() => click(4)}>
+					<OptionBtn className="btn" onClick={() => click(3)}>
 						{q[index - 1].a4}
 					</OptionBtn>
 				</>
