@@ -3,50 +3,40 @@ import { Col } from "antd";
 import { useRouter } from "next/router";
 
 import {
-	WidthImg,
-	HalfImg,
-	fullCol,
-	Container,
-	StartButton,
+  WidthImg,
+  HalfImg,
+  fullCol,
+  Container,
+  StartButton,
 } from "../assets/css/style_index";
 
 const Home = () => {
-	const router = useRouter();
+  const router = useRouter();
 
-	const toTest = () => {
-		router.push("/test");
-	};
+  const toTest = () => {
+    router.push("/test");
+  };
 
-	return (
-		<>
-			<Container>
-				<Col {...fullCol}>
-					<div style={{ height: "80px" }}></div>
+  return (
+    <>
+      <Container>
+        <Col {...fullCol}>
+          <div style={{ height: "80px" }}></div>
+          <WidthImg src={require("../assets/images/index/header.png")} />
+          <HalfImg src={require("../assets/images/index/logo.png")} />
+          <WidthImg src={require("../assets/images/index/deoksun.png")} />
 
-					{/* <WidthImg src="/images/index/header.png" />
-					<HalfImg src="/images/index/logo.png" />
-
-					<WidthImg src="/images/index/deoksun.png" alt="" /> */}
-
-					<WidthImg
-						src={require("../assets/images/index/header.png")}
-					/>
-					<HalfImg src={require("../assets/images/index/logo.png")} />
-					<WidthImg
-						src={require("../assets/images/index/deoksun.png")}
-					/>
-
-					<StartButton onClick={toTest}>시작 하기</StartButton>
-				</Col>
-			</Container>
-		</>
-	);
+          <StartButton onClick={toTest}>시작 하기</StartButton>
+        </Col>
+      </Container>
+    </>
+  );
 };
 
 export default Home;
 
 {
-	/* <Button
+  /* <Button
 						type="primary"
 						style={{
 							display: "block",
