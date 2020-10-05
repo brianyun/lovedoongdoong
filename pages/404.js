@@ -6,8 +6,8 @@ const Error = () => {
   const router = useRouter();
 
   const escape = () => {
-    // router.push("/test");
-    console.log("escape");
+    router.push("/test");
+    // console.log("escape");
   };
   return (
     <Container onClick={escape}>
