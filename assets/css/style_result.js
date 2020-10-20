@@ -5,6 +5,7 @@ export const RowsContainer = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: start;
+  margin: 0;
 `;
 
 export const GoodBadContainer = styled.div`
@@ -104,11 +105,18 @@ export const ActionBtn = styled.button`
 
 export const IconBtn = styled.button`
   width: 20vw;
+  height: 50px;
   background-color: #ddd;
   border: none;
   cursor: pointer;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: #fff;
   outline: none;
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
 `;

@@ -11,6 +11,7 @@ import { createStore } from "redux";
 import reducer from "../reducers";
 
 import { createGlobalStyle } from "styled-components";
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = ({ Component }) => {
 	return (

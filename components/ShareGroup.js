@@ -5,6 +5,7 @@ import { FacebookProvider, Share } from "react-facebook";
 import { RowsContainer, ActionBtn, IconBtn } from "../assets/css/style_result";
 import { CLEAR_URLS } from "../reducers/answer";
 import icons from "../back/icon_result";
+import { ToastContainer, toast } from 'react-toastify';
 
 function ShareGroup({ title, thumbUrl }) {
 	const dispatch = useDispatch();
@@ -46,6 +47,10 @@ function ShareGroup({ title, thumbUrl }) {
 		}
 	}, []);
 
+	const toInstaToast = () => {
+		toast("인스타는 캡쳐 후 공유해주세요!");
+	}
+
 	const toTop = () => {
 		dispatch({ type: CLEAR_URLS });
 		router.push("/");
@@ -53,13 +58,14 @@ function ShareGroup({ title, thumbUrl }) {
 
 	return (
 		<>
-			<RowsContainer>
-				<ActionBtn onClick={toTop} style={{ marginLeft: "20px" }}>
-					다시 해보기
-				</ActionBtn>
+			<RowsContainer style={{marginBottom: "10px"}}>
+				<IconBtn onClick={toInstaToast}>
+					<img src={icons["instagram"]} />
+					<ToastContainer />
+				</IconBtn>
 
 				<IconBtn onClick={toKakao}>
-					<img src={icons["kakao"]} style={{ width: "50px" }} />
+					<img src={icons["kakao"]} />
 				</IconBtn>
 
 				<FacebookProvider appId="3621305641226627">
@@ -76,6 +82,12 @@ function ShareGroup({ title, thumbUrl }) {
 						)}
 					</Share>
 				</FacebookProvider>
+			</RowsContainer>
+
+			<RowsContainer>
+				<ActionBtn onClick={toTop} style={{ width: "calc(100% - 20px)"}}>
+					다시 해보기
+				</ActionBtn>
 			</RowsContainer>
 		</>
 	);
