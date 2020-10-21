@@ -7,15 +7,16 @@ import SEO from "../next-seo.config.js";
 
 import withRedux from "next-redux-wrapper";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import reducer from "../reducers";
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { createGlobalStyle } from "styled-components";
 import 'react-toastify/dist/ReactToastify.css';
 
-const App = ({ Component }) => {
+const App = ({ Component, store, pageProps }) => {
 	return (
-		<>
+		<Provider store={store}>
 			<NextSeo {...SEO} />
 			<Head>
 				<meta charSet="utf-8" />
@@ -27,19 +28,31 @@ const App = ({ Component }) => {
 				/>
 			</Head>
 			<GlobalStyle />
-			<Component />
-		</>
+			<Component {...pageProps}/>
+		</Provider>
 	);
 };
 
 App.propTypes = {
 	Component: PropTypes.elementType.isRequired,
 	store: PropTypes.object,
+	pageProps: PropTypes.object,
 };
 
-export default withRedux((initialState, options) => {
-	const store = createStore(reducer, initialState);
-	return store;
+App.getInitialProps = async (context) => {
+	console.log(context);
+	const { ctx, Component } = context;
+	let pageProps = {};
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+  return { pageProps };
+};
+
+export default withRedux((initialState) => {
+  const middlewares = [];
+  const store = createStore(reducer, initialState, composeWithDevTools(applyMiddleware(...middlewares)));
+  return store;
 })(App);
 
 const GlobalStyle = createGlobalStyle`

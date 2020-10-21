@@ -3,9 +3,72 @@ import styled from "styled-components";
 export const RowsContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+
+  .icon-container {
+    height: 50px;
+    width: 50px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    outline: none;
+    margin: 0 10px;
+
+    background-color: lightsalmon;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .twitter-button {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+    }
+    .twitter-button:focus {
+      outline: none;
+    }
+  }
+`;
+export const IconBtn = styled.button`
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  outline: none;
+  margin: 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .twitter-button {
+      margin-top: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      object-fit: contain;
+  }
+  :focus {
+    outline: none;
+  }
 `;
 
 export const GoodBadContainer = styled.div`
@@ -103,20 +166,3 @@ export const ActionBtn = styled.button`
   }
 `;
 
-export const IconBtn = styled.button`
-  width: 20vw;
-  height: 50px;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  outline: none;
-
-  img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-  }
-`;
